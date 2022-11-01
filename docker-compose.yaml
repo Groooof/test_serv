@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  test_serv:
+    restart: always
+    container_name: test_serv
+    build: .
+    ports:
+      - '80:80'
+    volumes:
+      - .:/code
+    environment:
+      - PYTHONPATH=/code
